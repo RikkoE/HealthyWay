@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/turnON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TURN_ON"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/switch1"
+        android:layout_alignStart="@+id/switch1" />
+
+    <Button
+        android:id="@+id/discoverable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DISCOVERABLE"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/turnOFF"
+        android:layout_toEndOf="@+id/turnOFF" />
+
+
+    <View
+        android:layout_width="1dp"
+        android:rotation="90"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:background="#FF0000FF"
+
+        android:id="@+id/view" />
+    <Button
+        android:id="@+id/turnOFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TURN_OFF"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/turnON"
+        android:layout_toEndOf="@+id/turnON" />
+
+    <TextView
+        android:id="@+id/out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Devices"
+        android:textColor="#ff0a6080"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:layout_below="@+id/discoverable"
+        android:layout_toRightOf="@+id/view"
+        android:layout_toEndOf="@+id/view"
+        android:layout_marginTop="66dp">
+    </TextView>
+
+
+    <ListView
+        android:id="@+id/devicesfound"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/discoverable"
+        android:layout_toRightOf="@+id/view"
+        android:layout_toEndOf="@+id/view"
+        android:layout_marginTop="103dp" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Scan"
+        android:textColor="#ff0a6080"
+        android:id="@+id/switch1"
+        android:layout_alignBaseline="@+id/out"
+        android:layout_alignBottom="@+id/out"
+        android:layout_toRightOf="@+id/view"
+        android:layout_toEndOf="@+id/view" />
+
+</RelativeLayout>
