@@ -4,41 +4,44 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
 
-    <Button
+<!--    <Button
         android:id="@+id/turnON"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TURN_ON"
         android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/switch1"
-        android:layout_alignStart="@+id/switch1" />
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"/>
 
-    <Button
-        android:id="@+id/discoverable"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DISCOVERABLE"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/turnOFF"
-        android:layout_toEndOf="@+id/turnOFF" />
-
-
-    <View
-        android:layout_width="1dp"
-        android:rotation="90"
-        android:layout_height="fill_parent"
-        android:layout_marginLeft="10dp"
-        android:background="#FF0000FF"
-
-        android:id="@+id/view" />
     <Button
         android:id="@+id/turnOFF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TURN_OFF"
         android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/turnON"
         android:layout_toEndOf="@+id/turnON" />
+-->
+
+    <Button
+        android:id="@+id/scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SCAN"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/toggleBluetooth"
+        android:layout_alignBottom="@+id/out"/>
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="Bluetooth is on"
+        android:textOff="Bluetooth is off"
+        android:id="@+id/toggleBluetooth"
+        android:layout_alignBottom="@+id/out"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:id="@+id/out"
@@ -48,31 +51,24 @@
         android:textColor="#ff0a6080"
         android:textStyle="bold"
         android:textSize="25dp"
-        android:layout_below="@+id/discoverable"
-        android:layout_toRightOf="@+id/view"
-        android:layout_toEndOf="@+id/view"
-        android:layout_marginTop="66dp">
-    </TextView>
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"/>
 
+    <View
+        android:id="@+id/view"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignBottom="@+id/out"
+        android:background="#FF0000FF" />
 
     <ListView
         android:id="@+id/devicesfound"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@+id/discoverable"
-        android:layout_toRightOf="@+id/view"
-        android:layout_toEndOf="@+id/view"
-        android:layout_marginTop="103dp" />
+        android:layout_alignTop="@+id/view" />
 
-    <Switch
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start Scan"
-        android:textColor="#ff0a6080"
-        android:id="@+id/switch1"
-        android:layout_alignBaseline="@+id/out"
-        android:layout_alignBottom="@+id/out"
-        android:layout_toRightOf="@+id/view"
-        android:layout_toEndOf="@+id/view" />
+
 
 </RelativeLayout>
